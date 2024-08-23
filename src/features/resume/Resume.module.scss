@@ -1,22 +1,104 @@
 .resume_wrapper {
-  width: 21cm;
-  min-height: 29.7cm;
-  padding: 2cm;
-  margin: 1cm auto;
-  border: 1px #d3d3d3 solid;
-  border-radius: 5px;
-  background: #ffffff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font: 12pt "Consolas";
+  margin: 20px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 40px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 10px 10px 10px 0px;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(95, 95, 95, 1);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(124, 124, 124, 0.8);
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgb(124, 124, 124);
+  }
 }
 @media print {
   .resume_wrapper {
     margin: 0;
-    border: initial;
-    border-radius: initial;
-    width: initial;
-    min-height: initial;
-    box-shadow: initial;
-    background: initial;
-    page-break-after: always;
+    padding: 0;
+    overflow: hidden;
+    .resume_container {
+      position: fixed;
+      inset: 0;
+    }
   }
+}
+.resume_container {
+  width: 216mm;
+  min-height: 297mm;
+  padding: 1cm;
+  margin: auto;
+  border-radius: 5px;
+  background: #484b59;
+  // background: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.about_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .designation {
+    font-size: 1.1rem;
+    letter-spacing: 0.25rem;
+    margin-bottom: 2rem;
+  }
+  .name {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.4rem;
+  }
+  .summary {
+    background: rgb(55, 57, 68);
+    padding: 10px;
+    border-radius: 10px;
+    letter-spacing: 0.05rem;
+  }
+}
+.projects_wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 20px;
+  .projects {
+    flex: 1;
+    .project {
+      .title {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+      }
+    }
+  }
+}
+.tabbed {
+  margin-left: 1rem;
+}
+.heading {
+  font-size: 1.2rem;
+  color: #78d492;
+  letter-spacing: 0.1rem;
+}
+.greenText {
+  color: #78d492;
+}
+.yellowText {
+  color: #f7f3c6;
+}
+.blueText {
+  color: rgb(121, 121, 255);
+}
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

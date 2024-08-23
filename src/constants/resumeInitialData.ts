@@ -1,4 +1,6 @@
-export const RESUME_INITIAL_DATA = {
+import { ResumeDataProps } from "@/types/resume-data";
+
+export const RESUME_INITIAL_DATA: ResumeDataProps = {
   about: {
     name: "Rishabh Panwar",
     location: "",
@@ -29,10 +31,12 @@ export const RESUME_INITIAL_DATA = {
     {
       title: "Sotheby's Motorsport",
       link: "https://sothebysmotorsport.com/",
+      stack: "",
     },
     {
-      company: "Dupont Registry",
+      title: "Dupont Registry",
       link: "https://www.dupontregistry.com/",
+      stack: "",
     },
   ],
   responsibilties: [

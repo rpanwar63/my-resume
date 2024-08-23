@@ -1,0 +1,13 @@
+.page_wrapper {
+  display: flex;
+  min-height: 100vh;
+  transition: all 150ms ease-out;
+  &.flip_view {
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (max-width: 1367px) {
+  .page_wrapper {
+    flex-direction: column;
+  }
+}
