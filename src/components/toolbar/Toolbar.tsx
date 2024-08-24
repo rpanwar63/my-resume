@@ -15,23 +15,25 @@ const Toolbar = () => {
     window.print();
   };
   return (
-    <Paper sx={styles.toolbar_wrapper}>
-      <IconButton onClick={handleFlip}>
-        {viewFlipped ? (
-          <SwitchRightRoundedIcon color="primary" fontSize="large" />
-        ) : (
-          <SwitchLeftRoundedIcon color="primary" fontSize="large" />
-        )}
-      </IconButton>
-      <Button
-        variant="contained"
-        sx={styles.toolbar_export_button}
-        onClick={download}
-      >
-        <FileDownloadRoundedIcon />
-        &nbsp;PDF Export
-      </Button>
-    </Paper>
+    <div style={{ padding: "10px" }}>
+      <Paper sx={styles.toolbar_wrapper}>
+        <IconButton onClick={handleFlip}>
+          {viewFlipped ? (
+            <SwitchRightRoundedIcon color="primary" fontSize="large" />
+          ) : (
+            <SwitchLeftRoundedIcon color="primary" fontSize="large" />
+          )}
+        </IconButton>
+        <Button
+          variant="contained"
+          sx={styles.toolbar_export_button}
+          onClick={download}
+        >
+          <FileDownloadRoundedIcon />
+          &nbsp;PDF Export
+        </Button>
+      </Paper>
+    </div>
   );
 };
 export default Toolbar;
